@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eletrica A 24h | Eletricista em São Paulo - Emergências e Reparos</title>
+  <meta name="description" content="Eletrica A 24h. Atendimento urgente para falta de energia, curto-circuito, instalação e conserto de chuveiro, ventilador, luminária e tomada em São Paulo. Chame no WhatsApp.">
+  <link rel="icon" type="image/png" href="https://eletricaa.com.br/wa_images/eletrica_a_144.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0856fb',
+            primaryDark: '#0645c9',
+            secondary: '#f43319',
+            accent: '#69f128',
+            dark: '#0f172a',
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(15, 23, 42, 0.08)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.open .faq-content {
+      max-height: 300px;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#inicio" class="flex items-center gap-3">
+          <img src="https://eletricaa.com.br/wa_images/eletrica_a_144.png" alt="Logo Eletrica A" class="h-10 w-10 rounded-full" loading="lazy">
+          <span class="font-bold text-lg text-dark">Eletrica A</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#servicos" class="hover:text-primary transition">Serviços</a>
+          <a href="#depoimentos" class="hover:text-primary transition">Depoimentos</a>
+          <a href="#faq" class="hover:text-primary transition">FAQ</a>
+          <a href="#contato" class="hover:text-primary transition">Contato</a>
+        </nav>
+        <a href="https://api.whatsapp.com/send?l=pt&phone=5511988840073&text=Ol%C3%A1%2C%20preciso%20de%20um%20eletricista." target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition shadow-soft">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span class="hidden sm:inline">WhatsApp 24h</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://eletricaa.com.br/wa_images/painel_eletrico_bg.webp" alt="Painel elétrico" class="w-full h-full object-cover" loading="eager">
+      <div class="absolute inset-0 bg-slate-950/75"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="reveal text-white">
+          <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1 text-sm mb-5">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+            Atendimento elétrico 24 horas em São Paulo
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+            Emergências elétricas resolvidas com rapidez e segurança
+          </h1>
+          <p class="text-lg sm:text-xl text-slate-200 mb-8 max-w-2xl">
+            Atendimento urgente para falta de energia total ou parcial, curto-circuito, disjuntores desarmando, além de instalação e conserto de chuveiro, ventilador, luminária e tomada.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://api.whatsapp.com/send?l=pt&phone=5511988840073&text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20el%C3%A9trico%20urgente." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-accent text-slate-900 font-bold px-6 py-3.5 rounded-xl hover:brightness-110 transition shadow-soft">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              Chamar no WhatsApp
+            </a>
+            <a href="tel:+5511988840073" class="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/30 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-white/20 transition">
+              <i class="fa-solid fa-phone"></i>
+              (11) 98884-0073
+            </a>
+          </div>
+          <p class="mt-5 text-sm text-slate-300">Após horário comercial, atendimento restrito ao WhatsApp.</p>
+        </div>
+        <div class="reveal lg:justify-self-end">
+          <div class="bg-white/95 backdrop-blur rounded-2xl p-6 sm:p-8 shadow-2xl max-w-md w-full">
+            <div class="flex items-center gap-4 mb-5">
+              <img src="https://eletricaa.com.br/wa_images/eletrica_a_144.png" alt="Logo Eletrica A" class="h-14 w-14" loading="lazy">
+              <div>
+                <p class="font-bold text-lg text-dark">Eletrica A</p>
+                <p class="text-slate-600 text-sm">Eletricista residencial 24h</p>
+              </div>
+            </div>
+            <ul class="space-y-3 text-slate-700">
+              <li class="flex gap-3"><i class="fa-solid fa-bolt text-primary mt-1"></i><span>Emergência elétrica e curto-circuito</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-shower text-primary mt-1"></i><span>Chuveiro: instalação, conserto e troca de resistência</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-fan text-primary mt-1"></i><span>Ventilador de teto: instalação e manutenção</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-plug text-primary mt-1"></i><span>Tomadas, luminárias e pequenos reparos elétricos</span></li>
+            </ul>
+            <div class="mt-6 p-4 bg-slate-100 rounded-xl text-sm text-slate-700">
+              <p><strong>Atendimento:</strong> 24 horas, todos os dias</p>
+              <p><strong>Região:</strong> São Paulo (zonas Norte, Sul, Leste e Oeste)</p>
+              <p><strong>Pagamento:</strong> Dinheiro, Pix, Débito e Crédito em até 3x sem juros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-dark mb-4">Serviços elétricos para sua residência</h2>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">Soluções práticas e seguras para emergências e manutenções do dia a dia, com atendimento rápido em São Paulo.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="reveal bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4"><i class="fa-solid fa-triangle-exclamation text-xl"></i></div>
+          <h3 class="text-xl font-bold mb-3">Emergência elétrica 24h</h3>
+          <ul class="space-y-2 text-slate-700">
+            <li>• Falta de energia total ou parcial</li>
+            <li>• Curto-circuito e disjuntor desarmando</li>
+            <li>• Quadro de disjuntores em curto</li>
+            <li>• Fiação danificada e fuga de corrente</li>
+          </ul>
+        </article>
+        <article class="reveal bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4"><i class="fa-solid fa-shower text-xl"></i></div>
+          <h3 class="text-xl font-bold mb-3">Chuveiro elétrico</h3>
+          <ul class="space-y-2 text-slate-700">
+            <li>• Instalação de chuveiro e ducha</li>
+            <li>• Conserto e manutenção preventiva</li>
+            <li>• Troca de resistência (mediante foto)</li>
+            <li>• Troca e manutenção de torneira elétrica</li>
+          </ul>
+        </article>
+        <article class="reveal bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4"><i class="fa-solid fa-fan text-xl"></i></div>
+          <h3 class="text-xl font-bold mb-3">Ventilador de teto</h3>
+          <ul class="space-y-2 text-slate-700">
+            <li>• Instalação com fixação reforçada</li>
+            <li>• Conserto de ventilador parado, lento ou com vibração</li>
+            <li>• Manutenção especializada</li>
+            <li>• Marcas como Arno, Ventisol, Tron, Volare, Spirit, Hunter, Latina e outras</li>
+          </ul>
+        </article>
+        <article class="reveal bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4"><i class="fa-solid fa-plug text-xl"></i></div>
+          <h3 class="text-xl font-bold mb-3">Tomadas e interruptores</h3>
+          <ul class="space-y-2 text-slate-700">
+            <li>• Instalação de novas tomadas (10A e 20A)</li>
+            <li>• Substituição para padrão atual</li>
+            <li>• Conversão de tensão 220V/110V</li>
+            <li>• Reparo de tomadas em curto-circuito</li>
+          </ul>
+        </article>
+        <article class="reveal bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4"><i class="fa-solid fa-lightbulb text-xl"></i></div>
+          <h3 class="text-xl font-bold mb-3">Iluminação e luminárias</h3>
+          <ul class="space-y-2 text-slate-700">
+            <li>• Instalação de luminárias de embutir e sobrepor</li>
+            <li>• Lustres, pendentes, spots e painéis de LED</li>
+            <li>• Troca de lâmpadas, reatores e soquetes</li>
+            <li>• Instalação de sensor de presença e fotocélula</li>
+          </ul>
+        </article>
+        <article class="reveal bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4"><i class="fa-solid fa-screwdriver-wrench text-xl"></i></div>
+          <h3 class="text-xl font-bold mb-3">Pequenos reparos elétricos</h3>
+          <ul class="space-y-2 text-slate-700">
+            <li>• Substituição de tomada e interruptor</li>
+            <li>• Reparo em quadro de distribuição</li>
+            <li>• Oscilações na luz e sobrecarga</li>
+            <li>• Análise do problema e solução imediata</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prova Social -->
+  <section id="depoimentos" class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-dark mb-4">O que nossos clientes dizem</h2>
+        <p class="text-lg text-slate-600">Avaliações fictícias realistas baseadas no tipo de atendimento prestado.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="reveal bg-white rounded-2xl p-6 shadow-soft border border-slate-200">
+          <div class="flex text-amber-400 mb-3" aria-label="5 estrelas">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-700 mb-4">"Fiquei sem energia em parte da casa à noite e o atendimento foi muito rápido. Identificaram o problema no disjuntor e resolveram na hora."</p>
+          <p class="font-semibold text-dark">Carlos M.</p>
+          <p class="text-sm text-slate-500">São Paulo - Zona Norte</p>
+        </article>
+        <article class="reveal bg-white rounded-2xl p-6 shadow-soft border border-slate-200">
+          <div class="flex text-amber-400 mb-3" aria-label="5 estrelas">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-700 mb-4">"Precisei trocar a resistência do chuveiro com urgência. Enviei a foto pelo WhatsApp, confirmaram a peça e o serviço ficou pronto no mesmo dia."</p>
+          <p class="font-semibold text-dark">Ana L.</p>
+          <p class="text-sm text-slate-500">São Paulo - Zona Sul</p>
+        </article>
+        <article class="reveal bg-white rounded-2xl p-6 shadow-soft border border-slate-200">
+          <div class="flex text-amber-400 mb-3" aria-label="5 estrelas">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-700 mb-4">"Instalaram meu ventilador de teto com bastante cuidado e deixaram tudo funcionando perfeitamente. Atendimento claro e profissional."</p>
+          <p class="font-semibold text-dark">Roberto S.</p>
+          <p class="text-sm text-slate-500">São Paulo - Zona Oeste</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-dark mb-4">Perguntas frequentes</h2>
+        <p class="text-lg text-slate-600">Tire suas dúvidas sobre os principais serviços da Eletrica A.</p>
+      </div>
+      <div class="space-y-4" id="faqAccordion">
+        <div class="faq-item reveal bg-slate-50 border border-slate-200 rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between gap-4 p-5 text-left font-semibold text-dark">
+            <span>O atendimento é realmente 24 horas?</span>
+            <i class="fa-solid fa-chevron-down faq-icon transition-transform text-primary"></i>
+          </button>
+          <div class="faq-content px-5 pb-0 text-slate-700">
+            <p class="pb-5">Sim. A Eletrica A realiza atendimento 24 horas para emergências elétricas. Após o horário comercial, o atendimento é restrito ao WhatsApp.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal bg-slate-50 border border-slate-200 rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between gap-4 p-5 text-left font-semibold text-dark">
+            <span>Vocês atendem falta de energia e curto-circuito?</span>
+            <i class="fa-solid fa-chevron-down faq-icon transition-transform text-primary"></i>
+          </button>
+          <div class="faq-content px-5 pb-0 text-slate-700">
+            <p class="pb-5">Sim. Realizamos atendimento urgente para falta de energia total ou parcial, curto-circuito, disjuntores desarmando, tomadas em curto e outros problemas elétricos residenciais.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal bg-slate-50 border border-slate-200 rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between gap-4 p-5 text-left font-semibold text-dark">
+            <span>Fazem instalação e troca de resistência de chuveiro?</span>
+            <i class="fa-solid fa-chevron-down faq-icon transition-transform text-primary"></i>
+          </button>
+          <div class="faq-content px-5 pb-0 text-slate-700">
+            <p class="pb-5">Sim. Fazemos instalação, conserto e manutenção de chuveiros elétricos, além da troca de resistência. Para confirmar a disponibilidade da resistência, é recomendado enviar uma foto do chuveiro.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal bg-slate-50 border border-slate-200 rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between gap-4 p-5 text-left font-semibold text-dark">
+            <span>Quais serviços de tomadas e iluminação são realizados?</span>
+            <i class="fa-solid fa-chevron-down faq-icon transition-transform text-primary"></i>
+          </button>
+          <div class="faq-content px-5 pb-0 text-slate-700">
+            <p class="pb-5">Realizamos instalação e substituição de tomadas (10A/20A), troca para padrão atual, conversão de tensão 220V/110V, além de instalação de luminárias de embutir, sobrepor, lustres, pendentes e painéis de LED.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal bg-slate-50 border border-slate-200 rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between gap-4 p-5 text-left font-semibold text-dark">
+            <span>Quais formas de pagamento são aceitas?</span>
+            <i class="fa-solid fa-chevron-down faq-icon transition-transform text-primary"></i>
+          </button>
+          <div class="faq-content px-5 pb-0 text-slate-700">
+            <p class="pb-5">Aceitamos dinheiro, Pix, cartão de débito e cartão de crédito em até 3x sem juros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-20 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div class="reveal">
+          <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Solicite atendimento pelo WhatsApp</h2>
+          <p class="text-slate-300 text-lg mb-8">Preencha o formulário e sua mensagem será direcionada automaticamente para o WhatsApp da Eletrica A.</p>
+          <div class="space-y-4 text-slate-200">
+            <p class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i><span>(11) 4641-1323</span></p>
+            <p class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-accent"></i><span>(11) 98884-0073</span></p>
+            <p class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-accent"></i><span>Atendimento residencial em São Paulo - SP</span></p>
+            <p class="flex items-center gap-3"><i class="fa-solid fa-clock text-accent"></i><span>Atendimento 24 horas (após horário comercial, restrito ao WhatsApp)</span></p>
+          </div>
+        </div>
+        <div class="reveal bg-white text-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+          <form id="contactForm" class="space-y-4">
+            <div>
+              <label for="nome" class="block text-sm font-semibold mb-1">Nome</label>
+              <input id="nome" name="nome" type="text" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary" placeholder="Seu nome">
+            </div>
+            <div>
+              <label for="telefone" class="block text-sm font-semibold mb-1">Telefone / WhatsApp</label>
+              <input id="telefone" name="telefone" type="tel" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary" placeholder="(11) 99999-9999">
+            </div>
+            <div>
+              <label for="servico" class="block text-sm font-semibold mb-1">Tipo de serviço</label>
+              <select id="servico" name="servico" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary">
+                <option value="">Selecione</option>
+                <option>Emergência elétrica / Curto-circuito</option>
+                <option>Chuveiro elétrico</option>
+                <option>Ventilador de teto</option>
+                <option>Tomadas e interruptores</option>
+                <option>Luminárias e iluminação</option>
+                <option>Outro reparo elétrico</option>
+              </select>
+            </div>
+            <div>
+              <label for="mensagem" class="block text-sm font-semibold mb-1">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary" placeholder="Descreva o problema ou serviço necessário"></textarea>
+            </div>
+            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 rounded-xl transition shadow-soft">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              Enviar para o WhatsApp
+            </button>
+            <p class="text-xs text-slate-500 text-center">Ao enviar, você será redirecionado para o WhatsApp com a mensagem preenchida.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-slate-950 text-slate-300 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img src="https://eletricaa.com.br/wa_images/eletrica_a_144.png" alt="Logo Eletrica A" class="h-10 w-10" loading="lazy">
+          <div>
+            <p class="font-semibold text-white">Eletrica A</p>
+            <p class="text-sm">Emergências e reparos elétricos residenciais em São Paulo</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 text-xl">
+          <a href="https://api.whatsapp.com/send?l=pt&phone=5511988840073" target="_blank" rel="noopener" aria-label="WhatsApp" class="hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://t.me/EletricaA" target="_blank" rel="noopener" aria-label="Telegram" class="hover:text-white transition"><i class="fa-brands fa-telegram"></i></a>
+          <a href="mailto:eletrica@eletricaa.com.br" aria-label="E-mail" class="hover:text-white transition"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 mt-8 pt-6 text-sm text-center text-slate-400">
+        <p>&copy; <span id="year"></span> Eletrica A. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Ano no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // FAQ acordeão
+    document.querySelectorAll('.faq-toggle').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach((el) => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Formulário para WhatsApp
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const servico = document.getElementById('servico').value;
+      const mensagem = document.getElementById('mensagem').value.trim();
+      const texto = `Olá, meu nome é ${nome}.\nTelefone: ${telefone}\nServiço: ${servico}\nMensagem: ${mensagem}`;
+      const url = `https://api.whatsapp.com/send?phone=5511988840073&text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    });
+
+    // Animações ao rolar (lazy reveal)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
