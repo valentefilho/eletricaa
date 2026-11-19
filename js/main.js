@@ -7,29 +7,52 @@ document.addEventListener('DOMContentLoaded', () => {
     yearElement.textContent = new Date().getFullYear();
   }
 
-  // FAQ acordeão
+  // FAQ acordeão com acessibilidade ARIA
   const faqToggles = document.querySelectorAll('.faq-toggle');
   faqToggles.forEach((btn) => {
     btn.addEventListener('click', () => {
       const item = btn.parentElement;
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach((el) => el.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+
+      // Fecha todos os outros itens e atualiza ARIA
+      faqToggles.forEach((otherBtn) => {
+        const otherItem = otherBtn.parentElement;
+        otherItem.classList.remove('open');
+        otherBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      // Alterna o item atual
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 
-  // Formulário para WhatsApp
+  // Formulário para WhatsApp com sanitização e fallback seguro
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      const nome = document.getElementById('nome').value.trim();
-      const telefone = document.getElementById('telefone').value.trim();
-      const servico = document.getElementById('servico').value;
-      const mensagem = document.getElementById('mensagem').value.trim();
+
+      const nome = document.getElementById('nome')?.value.trim() || '';
+      const telefone = document.getElementById('telefone')?.value.trim() || '';
+      const servico = document.getElementById('servico')?.value.trim() || '';
+      const mensagem = document.getElementById('mensagem')?.value.trim() || '';
+
+      if (!nome || !telefone || !servico || !mensagem) {
+        alert('Por favor, preencha todos os campos do formulário.');
+        return;
+      }
+
       const texto = `Olá, meu nome é ${nome}.\nTelefone: ${telefone}\nServiço: ${servico}\nMensagem: ${mensagem}`;
       const url = `https://api.whatsapp.com/send?phone=5511988840073&text=${encodeURIComponent(texto)}`;
-      window.open(url, '_blank');
+
+      // Tenta abrir em nova aba; se bloqueado pelo navegador, redireciona diretamente
+      const win = window.open(url, '_blank');
+      if (!win || win.closed || typeof win.closed === 'undefined') {
+        window.location.href = url;
+      }
     });
   }
 
