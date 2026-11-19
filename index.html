@@ -7,47 +7,9 @@
   <meta name="description" content="Eletrica A 24h. Atendimento urgente para falta de energia, curto-circuito, instalação e conserto de chuveiro, ventilador, luminária e tomada em São Paulo. Chame no WhatsApp.">
   <link rel="icon" type="image/png" href="https://eletricaa.com.br/wa_images/eletrica_a_144.png">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind/tailwind.config.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0856fb',
-            primaryDark: '#0645c9',
-            secondary: '#f43319',
-            accent: '#69f128',
-            dark: '#0f172a',
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(15, 23, 42, 0.08)',
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .faq-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-    .faq-item.open .faq-content {
-      max-height: 300px;
-    }
-    .faq-item.open .faq-icon {
-      transform: rotate(180deg);
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="font-sans text-slate-800 bg-slate-50 antialiased">
   <!-- Header -->
@@ -369,43 +331,6 @@
     </div>
   </footer>
 
-  <script>
-    // Ano no rodapé
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // FAQ acordeão
-    document.querySelectorAll('.faq-toggle').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach((el) => el.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
-      });
-    });
-
-    // Formulário para WhatsApp
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const nome = document.getElementById('nome').value.trim();
-      const telefone = document.getElementById('telefone').value.trim();
-      const servico = document.getElementById('servico').value;
-      const mensagem = document.getElementById('mensagem').value.trim();
-      const texto = `Olá, meu nome é ${nome}.\nTelefone: ${telefone}\nServiço: ${servico}\nMensagem: ${mensagem}`;
-      const url = `https://api.whatsapp.com/send?phone=5511988840073&text=${encodeURIComponent(texto)}`;
-      window.open(url, '_blank');
-    });
-
-    // Animações ao rolar (lazy reveal)
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

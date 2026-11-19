@@ -30,9 +30,16 @@ O site da **Eletrica A** foi desenvolvido para apresentar com clareza os serviç
 
 ```text
 .
-├── index.html        # Página principal da aplicação
-├── .gitignore        # Arquivos e diretórios ignorados pelo Git
-└── README.md         # Documentação do projeto
+├── css/
+│   └── style.css            # Folha de estilos personalizados e animações
+├── js/
+│   └── main.js              # Lógica de interações (FAQ, WhatsApp, Reveal)
+├── tailwind/
+│   └── tailwind.config.js   # Customização de tema e paleta de cores do Tailwind
+├── index.html               # Página principal da aplicação
+├── setup-github.ps1         # Script auxiliar para conexão com repositório remoto
+├── .gitignore               # Arquivos e diretórios ignorados pelo Git
+└── README.md                # Documentação do projeto
 ```
 
 ---
